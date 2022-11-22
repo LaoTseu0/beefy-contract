@@ -14,8 +14,9 @@ let {
   },
 } = addressBook.bsc;
 
-WBNB = "0xBdf1a2e17DECb2aAC725F0A1C8C4E2205E70719C";
-CAKE = ""
+WBNB = "0x7ef95a0FEE0Dd31b22626fA2e10Ee6A223F8a684";
+CAKE = "0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7"; // BUSD
+
 
 //const newToken = web3.utils.toChecksumAddress("0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"); Can add new tokens like this for deployment.
 const want = web3.utils.toChecksumAddress("0x0eD7e52944161450477ee417DE9Cd3a859b14fD0"); // Add the address of the underlying LP.
@@ -27,12 +28,12 @@ const vaultParams = {
 };
 
 const strategyParams = {
-  want: want,
+  want: "0xBAa1D7506274FD4B298c395ca865027aE3Ed36A6",
   poolId: 2, // Add the poolId.
-  chef: pancake.masterchefV2,
+  chef: "0x61d777dC41Bb391c491a644974C18fC069Ad3e62",
   // chef: pancake.masterchefV2,
   // unirouter: pancake.router,
-  unirouter: " 0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
+  unirouter: "0xCDe540d7eAFE93aC5fE6233Bee57E1270D3E330F",
   strategist: process.env.STRATEGIST_ADDRESS, // Add your public address or pull it from the .env file.
   keeper: beefyfinance.keeper,
   beefyFeeRecipient: beefyfinance.beefyFeeRecipient,
